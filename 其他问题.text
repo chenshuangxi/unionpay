@@ -1,0 +1,23 @@
+银联文档截止2016.2.23暂时不提供除java、.net、php、c#之外的sdk！T_T(坑)
+所以其他常见问题参见：https://open.unionpay.com/ajweb/help/faq/list?id=124&level=0&from=1
+
+例如：
+  openssl证书转换&打印内容相关命令：
+  
+    .pfx转pem编码的证书：
+    
+    openssl pkcs12 -in D:\certs\pri.pfx -out D:\certs\pri.pem -nodes
+    
+    
+    
+    der编码的证书转pem编码的证书：
+    
+    openssl x509 -inform DER -in D:\certs\pub.cer -out d:\certs\pub.pem
+    
+    （.cer文件能右键记事本正常打开的为pem编码的，记事本打开乱码的为der编码，pem编码的不用转，后面打印内容的命令可以直接对.cer执行）
+    
+    
+    
+    打印pem编码的x509证书的内容：
+    
+    openssl x509 -in D:\certs\pri.pem -text
